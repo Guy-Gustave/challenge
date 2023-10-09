@@ -69,3 +69,5 @@ end
 gem "bootstrap"
 
 gem "sassc-rails"
+
+gem 'simple_form'
