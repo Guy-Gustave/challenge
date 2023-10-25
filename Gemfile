@@ -71,3 +71,7 @@ gem "bootstrap"
 gem "sassc-rails"
 
 gem 'simple_form'
+
+gem 'faker'
+
+gem 'devise'
