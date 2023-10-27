@@ -7,7 +7,7 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <%# <th>Ponderation</th> %>
+    <th>User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,7 +20,7 @@
     <tr>
     <td><%= course.title %></td>
     <td><%= course.description %></td>
-    <%# <td><%= course.ponderation </td> %>
+    <td><%= course.user %></td>
     <td><%= link_to 'Show', course %></td>
     <td><%= link_to 'Edit', edit_course_path(course) %></td>
     <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?',

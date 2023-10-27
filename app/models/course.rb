@@ -6,6 +6,8 @@ class Course < ApplicationRecord
     def to_s
         title
     end
+
+    belongs_to :user
     
     has_rich_text :description
 end
