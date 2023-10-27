@@ -2,6 +2,7 @@
 
 <h1>Courses</h1>
 <div class="table-responsive">
+<div ><%= link_to "New course", new_course_path %></div>
 <table class="table">
   <tr>
     <th>Title</th>
@@ -25,11 +26,10 @@
     <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?',
                                      :method => :delete %></td>
   </tr>
-    <p>
+    <%# <p>
       <%= link_to "Show this course", course %>
-    </p>
+    <%# </p> %>
   <% end %>
 </table>
 </div>
 
-<%= link_to "New course", new_course_path %>
