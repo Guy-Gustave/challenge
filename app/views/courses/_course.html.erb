@@ -1,12 +1,12 @@
-<div id="<%= dom_id course %>">
-  <p>
-    <strong>Title:</strong>
+<div class="card">
+  <div class="card-header">
     <%= course.title %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
+  </div>
+  <div class="card-body">
     <%= course.description %>
-  </p>
-
+  </div>
+  <div class="card-footer">
+    <%= course.created_at %>
+    <%= course.user %>
+  </div>
 </div>

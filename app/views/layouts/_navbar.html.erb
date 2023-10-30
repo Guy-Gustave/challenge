@@ -36,11 +36,25 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex">
+      <%# <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
         
-      </form>
+      </form> %>
+
+      <div class="form-inline m-2 my-lg-0" >
+        <%= form_tag(courses_path, method: :get) do %>
+          <div class="input-group mr-3">
+            <%= text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm' %>
+            <span class="input-group-append">
+              <%# <button class="btn btn-primary btn-sm" type="submit">
+                <span aria-hidden="true" class="fa fa-search"></span>
+              </button> %>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </span>
+          </div>
+        <% end %>
+      </div>
 
       <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

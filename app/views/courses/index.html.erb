@@ -3,7 +3,20 @@
 <h1>Courses</h1>
 <div class="table-responsive">
 <div ><%= link_to "New course", new_course_path %></div>
+
+<h1>
+  Courses:
+  <%= @courses.count %>
+</h1>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <% @courses.each do |course| %>
+    <%= render 'courses/course', course: course %>
+  <% end %>
+</div>
+
 <table class="table">
+
+
   <tr>
     <th>Title</th>
     <th>Description</th>
