@@ -8,7 +8,7 @@
 
 User.create!(email: 'admin@test.com', password: '123456', password_confirmation: '123456')
 
-10.times do
+5.times do
     Course.create!([{
         title: Faker::Educator.course_name,
         description: Faker::TvShows::GameOfThrones.quote,
