@@ -1,35 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Courses</h1>
-<div class="table-responsive">
+
 <div ><%= link_to "New course", new_course_path %></div>
-<table class="table">
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <%# <th>Ponderation</th> %>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<%# <div id="courses" table> %>
-
+<h1>
+  Courses:
+  <%= @courses.count %>
+</h1>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
   <% @courses.each do |course| %>
-    <%# <%= render course %> 
-    <tr>
-    <td><%= course.title %></td>
-    <td><%= course.description %></td>
-    <%# <td><%= course.ponderation </td> %>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?',
-                                     :method => :delete %></td>
-  </tr>
-    <%# <p>
-      <%= link_to "Show this course", course %>
-    <%# </p> %>
+    <%= render 'courses/course', course: course %>
   <% end %>
-</table>
 </div>
-

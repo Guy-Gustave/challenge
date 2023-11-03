@@ -3,7 +3,11 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
-    @courses = Course.all
+    if params[:title]
+      @courses = Course.where('title ILIKE ?', "%#{params[:title]}%")
+    else
+      @courses = Course.all
+    end
   end
 
   # GET /courses/1 or /courses/1.json
@@ -22,6 +26,7 @@ class CoursesController < ApplicationController
   # POST /courses or /courses.json
   def create
     @course = Course.new(course_params)
+    @course.user = current_user
 
     respond_to do |format|
       if @course.save
@@ -60,7 +65,7 @@ class CoursesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
-      @course = Course.find(params[:id])
+      @course = Course.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

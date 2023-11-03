@@ -75,3 +75,5 @@ gem 'simple_form'
 gem 'faker'
 
 gem 'devise'
+
+gem 'friendly_id'
