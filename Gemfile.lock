@@ -98,6 +98,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    humanize (2.5.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -240,6 +241,7 @@ DEPENDENCIES
   devise
   faker
   friendly_id
+  humanize
   image_processing (~> 1.2)
   importmap-rails
   jbuilder

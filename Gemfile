@@ -77,3 +77,5 @@ gem 'faker'
 gem 'devise'
 
 gem 'friendly_id'
+
+gem 'humanize'
