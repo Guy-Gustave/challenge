@@ -8,10 +8,22 @@
 
 # User.create!(email: 'admin@test.com', password: '123456', password_confirmation: '123456')
 
+# 5.times do
+#     Course.create!([{
+#         title: Faker::Educator.course_name,
+#         description: Faker::TvShows::GameOfThrones.quote,
+#         user_id: User.last.id
+#     }])
+# end
+
 5.times do
     Course.create!([{
         title: Faker::Educator.course_name,
         description: Faker::TvShows::GameOfThrones.quote,
-        user_id: User.last.id
+        user_id: User.last.id,
+        short_description: Faker::Quote.famous_last_words,
+        language: Faker::ProgrammingLanguage.name,
+        level: 'Beginner',
+        price: Faker::Number.between(from: 20, to: 150)
     }])
 end
