@@ -27,3 +27,18 @@
         price: Faker::Number.between(from: 20, to: 150)
     }])
 end
+
+5.times do
+    Article.create!([{
+        title: Faker::Creature::Animal.name,
+        description: Faker::TvShows::FamilyGuy.name,
+        user_id: User.first.id
+        # article.image.attach(
+        #     io: File.open(Rails.root.join('app/assets/images/IMG0962.jpg')),
+        #     filename: 'IMG0962.jpg'
+        #     )
+    }])
+end
+    
+
+#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])

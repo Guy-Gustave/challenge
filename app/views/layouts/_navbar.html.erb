@@ -22,6 +22,13 @@
           <% end %>
         </li>
 
+        <li class="<%= 'active font-weight-bold' if current_page?(articles_path) %> nav-item">
+          <%= link_to articles_path, class: 'nav-link' do %>
+            <div class="fa fa-book"></div>
+            Articles
+          <% end %>
+        </li>
+
         <li class="<%= 'active font-weight-bold' if current_page?(users_path) %> nav-item">
           <%= link_to users_path, class: 'nav-link' do %>
             <div class="fa fa-user"></div>
