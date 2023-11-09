@@ -5,14 +5,14 @@
     <%= link_to article.title, course_path(article) %>
   </div>
   <div class="card-body">
-    <%= article.description %>
     <% if article.image.attached? %>
-      <p>
-        <strong>Image:</strong>
+      <div class="card-img-left">
+        <%# <strong>Image:</strong> %>
         <%# <%= image_tag article.image.variant(resize: '700x700') %> 
-        <%= image_tag(article.image) %>
-      </p>
+        <%= image_tag(article.image, :size => "200x200" ) %>
+      </div>
     <% end %>
+    <%= article.description %>
   </div>
 
   <div class="card-footer">
