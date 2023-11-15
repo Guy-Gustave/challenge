@@ -1,0 +1,30 @@
+
+<div class="card">
+  <div class="card-header">
+    <div class="fa-regular fa-newspaper"></i>"></div>
+    <%= link_to article.title, course_path(article) %>
+  </div>
+  <div class="card-body">
+    <% if article.image.attached? %>
+      <div class="card-img-left">
+        <%# <strong>Image:</strong> %>
+        <%# <%= image_tag article.image.variant(resize: '700x700') %> 
+        <%= image_tag(article.image, :size => "200x200" ) %>
+      </div>
+    <% end %>
+    <%= article.description %>
+  </div>
+
+  <div class="card-footer">
+    <div class="far fa-clock"></div>
+    <%= article.created_at.strftime('%d-%b-%Y') %>
+    <div class="row"></div>
+    <div class="fa fa-chalkboard-teacher"></div>
+    <%= article.user %>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Show', article, class: 'btn btn-sm btn-primary' %>
+    <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-sm btn-warning' %>
+    <%= link_to 'Destroy', article, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+  </div>
+</div>

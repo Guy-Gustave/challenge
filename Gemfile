@@ -77,3 +77,7 @@ gem 'faker'
 gem 'devise'
 
 gem 'friendly_id'
+
+gem 'humanize'
+
+gem 'hirb', '~> 0.7.3'

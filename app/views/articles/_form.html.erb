@@ -1,5 +1,4 @@
-
-<%= simple_form_for(@course) do |f| %>
+<%= simple_form_for(@article) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -9,10 +8,7 @@
     <%= f.label :description %>
     <%= f.rich_text_area :description %>
     <small> <%= f.error :description, class: 'text-danger' %> </small>
-    <%= f.input :short_description %>
-    <%= f.input :language, collection: ['English', 'French', 'Swahili']  %>
-    <%= f.input :level, collection: ['Beginner', 'intermediate', 'Advanced'] %>
-    <%= f.input :price %>
+    <%= f.file_field :image %>
   </div>
 
   <div class="form-actions">
